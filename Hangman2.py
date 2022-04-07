@@ -1,5 +1,6 @@
 import turtle
 import time
+import random
 
 print("Remember to maximize the turtle window. ")
 
@@ -40,6 +41,8 @@ t_gallow.forward(width)
 t_gallow.left(90)
 t_gallow.up()
 
+
+x = random.randint(1,15)
 
 
 
