@@ -1,21 +1,45 @@
-print("Welcome to Hangman. The rules of this game can be found in the README file. Note that if a word contains the same letter multiple types, you need to guess that letter multiple times.")
-print("")
+import turtle
+import time
 
-a = input(print("If you would like a hint, type 'list' to pull up the word list."))
-a = str(a)
-a = a.upper()
-if a == "LIST":
-    print("Units are categorized by what they quantify")
-    print("")
-    print("Volume            Distance     Mass")
-    print("")
-    print("ounce             inch         gram")
-    print("cup               foot         ounce")
-    print("pint              yard         pound")
-    print("quart             meter        ton")
-    print("liter             mile"
-    print("gallon")
-    print("")
-    print("Hope this helps")
-else:
-    print("I didn't understand. No helpful hints for you!")
+print("Remember to maximize the turtle window. ")
+
+width = 30
+x = 200
+y = 300
+
+t_gallow = turtle.Pen()
+t_gallow.hideturtle()
+t_gallow.up()
+t_gallow.forward(200)
+t_gallow.left(90)
+t_gallow.forward(300)
+t_gallow.right(90)
+t_gallow.down()
+t_gallow.forward(0.5 * (300 + width))
+t_gallow.right(45)
+t_gallow.forward(2 ** 0.5 * (150 - width))
+t_gallow.right(45)
+t_gallow.forward(600 - (150 - width))
+t_gallow.right(90)
+t_gallow.forward(0.5 * (400 - width))
+t_gallow.left(90)
+t_gallow.forward(width)
+t_gallow.left(90)
+t_gallow.forward(400)
+t_gallow.left(90)
+t_gallow.forward(width)
+t_gallow.left(90)
+t_gallow.forward(0.5 * (400 - width))
+t_gallow.right(90)
+t_gallow.forward(600)
+t_gallow.forward(width)
+t_gallow.left(90)
+t_gallow.forward(0.5 * (600 + width))
+t_gallow.left(90)
+t_gallow.forward(width)
+t_gallow.left(90)
+t_gallow.up()
+
+
+
+
