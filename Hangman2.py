@@ -2,21 +2,6 @@ import turtle
 import random
 import time
 
-def cross_eye(x):
-    t_gallow.left(135)
-    t_gallow.down()
-    t_gallow.forward(2 ** 0.5 * x)
-    t_gallow.up()
-    t_gallow.left(135)
-    t_gallow.forward(x)
-    t_gallow.left(135)
-    t_gallow.down()
-    t_gallow.forward(2 ** 0.5 * x)
-    t_gallow.up()
-    t_gallow.right(135)
-    t_gallow.forward(x)
-    t_gallow.left(90)
-
 print("Remember to maximize the turtle window. ")
 
 width = 25
@@ -141,14 +126,14 @@ for i in range (0, letters):
     underscore.up()
     underscore.forward(50)
 
-guess = 1
+incorrect = None
 head_size = 50
 
-if guess == 1:
+if incorrect == 1:
     t_gallow.width(3)
     t_gallow.pencolor("tan")
     t_gallow.forward(100)
-if guess == 1:
+if incorrect == 2:
     t_gallow.width(1)
     t_gallow.pencolor("black")
     t_gallow.up()
@@ -158,32 +143,32 @@ if guess == 1:
     t_gallow.left(90)
     t_gallow.up()
     t_gallow.forward(2 * head_size)
-if guess == 1:
+if incorrect == 3:
     t_gallow.down()
     t_gallow.forward(250)
-if guess == 1:
+if incorrect == 4:
     t_gallow.right(180)
     t_gallow.forward(200)
     t_gallow.left(150)
     t_gallow.forward(150)
-if guess == 1:
+if incorrect == 6:
     t_gallow.right(180)
     t_gallow.forward(150)
     t_gallow.right(120)
     t_gallow.forward(150)
-if guess == 1:
+if incorrect == 7:
     t_gallow.right(180)
     t_gallow.forward(150)
     t_gallow.left(150)
     t_gallow.forward(200)
     t_gallow.right(30)
     t_gallow.forward(150)
-if guess == 1:
+if incorrect == 8:
     t_gallow.right(180)
     t_gallow.forward(150)
     t_gallow.right(120)
     t_gallow.forward(150)
-if guess == 1:
+if incorrect == 9:
     t_gallow.right(180)
     t_gallow.forward(150)
     t_gallow.right(30)
@@ -216,8 +201,13 @@ if guess == 1:
     t_gallow.down()
     t_gallow.forward(28.28)
     t_gallow.up()
-    t_gallow.right(135)
-    t_gallow.forward(20)
+    t_gallow.left(45)
+    t_gallow.forward(25)
+    t_gallow.left(90)
+    t_gallow.forward(30)
+    t_gallow.right(180)
+    t_gallow.down()
+    t_gallow.forward(70)
     
 
 
