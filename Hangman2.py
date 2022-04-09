@@ -2,6 +2,21 @@ import turtle
 import random
 import time
 
+def cross_eye(x):
+    t_gallow.left(135)
+    t_gallow.down()
+    t_gallow.forward(2 ** 0.5 * x)
+    t_gallow.up()
+    t_gallow.left(135)
+    t_gallow.forward(x)
+    t_gallow.left(135)
+    t_gallow.down()
+    t_gallow.forward(2 ** 0.5 * x)
+    t_gallow.up()
+    t_gallow.right(135)
+    t_gallow.forward(x)
+    t_gallow.left(90)
+
 print("Remember to maximize the turtle window. ")
 
 width = 25
@@ -23,7 +38,7 @@ t_gallow.forward(0.5 * (300 + width))
 t_gallow.right(45)
 t_gallow.forward(2 ** 0.5 * (150 - width))
 t_gallow.right(45)
-t_gallow.forward(600 - (150 - width))
+t_gallow.forward(650 - (150 - width))
 t_gallow.right(90)
 t_gallow.forward(0.5 * (400 - width))
 t_gallow.left(90)
@@ -35,7 +50,7 @@ t_gallow.forward(width)
 t_gallow.left(90)
 t_gallow.forward(0.5 * (400 - width))
 t_gallow.right(90)
-t_gallow.forward(600)
+t_gallow.forward(650)
 t_gallow.forward(width)
 t_gallow.left(90)
 t_gallow.forward(0.5 * (600 + width))
@@ -58,6 +73,10 @@ t_gallow.forward(150 - 2 * width)
 time.sleep(0.2)
 t_gallow.end_fill()
 t_gallow.up()
+t_gallow.forward(145)
+t_gallow.forward(2 ** 0.5 * width)
+t_gallow.left(90)
+t_gallow.down()
 
 
 x = random.randint(1,15)
@@ -121,7 +140,86 @@ for i in range (0, letters):
     underscore.forward(75)
     underscore.up()
     underscore.forward(50)
+
+guess = 1
+head_size = 50
+
+if guess == 1:
+    t_gallow.width(3)
+    t_gallow.pencolor("tan")
+    t_gallow.forward(100)
+if guess == 1:
+    t_gallow.width(1)
+    t_gallow.pencolor("black")
+    t_gallow.up()
+    t_gallow.right(90)
+    t_gallow.down()
+    t_gallow.circle(head_size)
+    t_gallow.left(90)
+    t_gallow.up()
+    t_gallow.forward(2 * head_size)
+if guess == 1:
+    t_gallow.down()
+    t_gallow.forward(250)
+if guess == 1:
+    t_gallow.right(180)
+    t_gallow.forward(200)
+    t_gallow.left(150)
+    t_gallow.forward(150)
+if guess == 1:
+    t_gallow.right(180)
+    t_gallow.forward(150)
+    t_gallow.right(120)
+    t_gallow.forward(150)
+if guess == 1:
+    t_gallow.right(180)
+    t_gallow.forward(150)
+    t_gallow.left(150)
+    t_gallow.forward(200)
+    t_gallow.right(30)
+    t_gallow.forward(150)
+if guess == 1:
+    t_gallow.right(180)
+    t_gallow.forward(150)
+    t_gallow.right(120)
+    t_gallow.forward(150)
+if guess == 1:
+    t_gallow.right(180)
+    t_gallow.forward(150)
+    t_gallow.right(30)
+    t_gallow.up()
+    t_gallow.forward(325)
+    t_gallow.left(90)
+    t_gallow.forward(25)
+    t_gallow.left(135)
+    t_gallow.down()
+    t_gallow.forward(28.28)
+    t_gallow.up()
+    t_gallow.left(135)
+    t_gallow.forward(20)
+    t_gallow.left(135)
+    t_gallow.down()
+    t_gallow.forward(28.28)
+    t_gallow.up()
+    t_gallow.right(135)
+    t_gallow.forward(20)
+    t_gallow.right(90)
+    t_gallow.forward(30)
+    t_gallow.right(180)
+    t_gallow.left(135)
+    t_gallow.down()
+    t_gallow.forward(28.28)
+    t_gallow.up()
+    t_gallow.left(135)
+    t_gallow.forward(20)
+    t_gallow.left(135)
+    t_gallow.down()
+    t_gallow.forward(28.28)
+    t_gallow.up()
+    t_gallow.right(135)
+    t_gallow.forward(20)
     
+
 
     
 
