@@ -125,91 +125,107 @@ for i in range (0, letters):
     underscore.forward(75)
     underscore.up()
     underscore.forward(50)
+underscore.right(180)
 
-incorrect = None
-head_size = 50
+incorrect = 0
+counter = 0
+place_mark = 0
 
-if incorrect == 1:
-    t_gallow.width(3)
-    t_gallow.pencolor("tan")
-    t_gallow.forward(100)
-if incorrect == 2:
-    t_gallow.width(1)
-    t_gallow.pencolor("black")
-    t_gallow.up()
-    t_gallow.right(90)
-    t_gallow.down()
-    t_gallow.circle(head_size)
-    t_gallow.left(90)
-    t_gallow.up()
-    t_gallow.forward(2 * head_size)
-if incorrect == 3:
-    t_gallow.down()
-    t_gallow.forward(250)
-if incorrect == 4:
-    t_gallow.right(180)
-    t_gallow.forward(200)
-    t_gallow.left(150)
-    t_gallow.forward(150)
-if incorrect == 6:
-    t_gallow.right(180)
-    t_gallow.forward(150)
-    t_gallow.right(120)
-    t_gallow.forward(150)
-if incorrect == 7:
-    t_gallow.right(180)
-    t_gallow.forward(150)
-    t_gallow.left(150)
-    t_gallow.forward(200)
-    t_gallow.right(30)
-    t_gallow.forward(150)
-if incorrect == 8:
-    t_gallow.right(180)
-    t_gallow.forward(150)
-    t_gallow.right(120)
-    t_gallow.forward(150)
+
+while incorrect < 9 and counter < letters:
+    guess = input(print("Please guess a letter. "))
+    for i in range (0,letters):
+        if guess == word[place_mark]:
+            print(1)
+        else:
+            place_mark = place_mark + 1
+            incorrect = incorrect + 1      
+    if incorrect == 1:
+        t_gallow.width(3)
+        t_gallow.pencolor("tan")
+        t_gallow.forward(100)
+    if incorrect == 2:
+        t_gallow.width(1)
+        t_gallow.pencolor("black")
+        t_gallow.up()
+        t_gallow.right(90)
+        t_gallow.down()
+        t_gallow.circle(50)
+        t_gallow.left(90)
+        t_gallow.up()
+        t_gallow.forward(100)
+    if incorrect == 3:
+        t_gallow.down()
+        t_gallow.forward(250)
+    if incorrect == 4:
+        t_gallow.right(180)
+        t_gallow.forward(200)
+        t_gallow.left(150)
+        t_gallow.forward(150)
+    if incorrect == 6:
+        t_gallow.right(180)
+        t_gallow.forward(150)
+        t_gallow.right(120)
+        t_gallow.forward(150)
+    if incorrect == 7:
+        t_gallow.right(180)
+        t_gallow.forward(150)
+        t_gallow.left(150)
+        t_gallow.forward(200)
+        t_gallow.right(30)
+        t_gallow.forward(150)
+    if incorrect == 8:
+        t_gallow.right(180)
+        t_gallow.forward(150)
+        t_gallow.right(120)
+        t_gallow.forward(150)
+    if incorrect == 9:
+        t_gallow.right(180)
+        t_gallow.forward(150)
+        t_gallow.right(30)
+        t_gallow.up()
+        t_gallow.forward(325)
+        t_gallow.left(90)
+        t_gallow.forward(25)
+        t_gallow.left(135)
+        t_gallow.down()
+        t_gallow.forward(28.28)
+        t_gallow.up()
+        t_gallow.left(135)
+        t_gallow.forward(20)
+        t_gallow.left(135)
+        t_gallow.down()
+        t_gallow.forward(28.28)
+        t_gallow.up()
+        t_gallow.right(135)
+        t_gallow.forward(20)
+        t_gallow.right(90)
+        t_gallow.forward(30)
+        t_gallow.right(180)
+        t_gallow.left(135)
+        t_gallow.down()
+        t_gallow.forward(28.28)
+        t_gallow.up()
+        t_gallow.left(135)
+        t_gallow.forward(20)
+        t_gallow.left(135)
+        t_gallow.down()
+        t_gallow.forward(28.28)
+        t_gallow.up()
+        t_gallow.left(45)
+        t_gallow.forward(25)
+        t_gallow.left(90)
+        t_gallow.forward(30)
+        t_gallow.right(180)
+        t_gallow.down()
+        t_gallow.forward(70)
+
+if counter == letters:
+    print("Congrats, you won! ")
 if incorrect == 9:
-    t_gallow.right(180)
-    t_gallow.forward(150)
-    t_gallow.right(30)
-    t_gallow.up()
-    t_gallow.forward(325)
-    t_gallow.left(90)
-    t_gallow.forward(25)
-    t_gallow.left(135)
-    t_gallow.down()
-    t_gallow.forward(28.28)
-    t_gallow.up()
-    t_gallow.left(135)
-    t_gallow.forward(20)
-    t_gallow.left(135)
-    t_gallow.down()
-    t_gallow.forward(28.28)
-    t_gallow.up()
-    t_gallow.right(135)
-    t_gallow.forward(20)
-    t_gallow.right(90)
-    t_gallow.forward(30)
-    t_gallow.right(180)
-    t_gallow.left(135)
-    t_gallow.down()
-    t_gallow.forward(28.28)
-    t_gallow.up()
-    t_gallow.left(135)
-    t_gallow.forward(20)
-    t_gallow.left(135)
-    t_gallow.down()
-    t_gallow.forward(28.28)
-    t_gallow.up()
-    t_gallow.left(45)
-    t_gallow.forward(25)
-    t_gallow.left(90)
-    t_gallow.forward(30)
-    t_gallow.right(180)
-    t_gallow.down()
-    t_gallow.forward(70)
-    
-
+    print("Sorry, you lost. ")
+else:
+    print("Error. ")
 
     
 
