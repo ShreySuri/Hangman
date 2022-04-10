@@ -130,16 +130,42 @@ underscore.right(180)
 incorrect = 0
 counter = 0
 place_mark = 0
+correct = False
 
 
 while incorrect < 9 and counter < letters:
     guess = input(print("Please guess a letter. "))
+    guess = guess.lower()
     for i in range (0,letters):
-        if guess == word[place_mark]:
-            print(1)
-        else:
-            place_mark = place_mark + 1
-            incorrect = incorrect + 1      
+        if guess == word[i]:
+            correct = True
+            if guess == "a":
+            if guess == "b":
+            if guess == "c":
+            if guess == "d":
+            if guess == "e":
+            if guess == "f":
+            if guess == "g":
+            if guess == "h":
+            if guess == "i":
+            if guess == "j":
+            if guess == "k":
+            if guess == "l":
+            if guess == "m":
+            if guess == "n":
+            if guess == "p":
+            if guess == "q":
+            if guess == "r":
+            if guess == "s":
+            if guess == "t":
+            if guess == "u":
+            if guess == "v":
+            if guess == "w":
+            if guess == "x":
+            if guess == "y":
+            if guess == "z":
+    if correct == False:
+        incorrect = incorrect + 1
     if incorrect == 1:
         t_gallow.width(3)
         t_gallow.pencolor("tan")
@@ -219,6 +245,8 @@ while incorrect < 9 and counter < letters:
         t_gallow.right(180)
         t_gallow.down()
         t_gallow.forward(70)
+
+        correct = False
 
 if counter == letters:
     print("Congrats, you won! ")
