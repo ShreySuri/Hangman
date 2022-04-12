@@ -143,6 +143,7 @@ while incorrect < 9 and counter < letters:
     for i in range (0,letters):
         if guess == word[i]:
             correct = True
+            counter = counter + 1
             underscore.forward(125*i)
             if guess == "a":
                 underscore.down()
@@ -167,7 +168,7 @@ while incorrect < 9 and counter < letters:
                 underscore.right(180)
                 underscore.forward(125/4)
                 underscore.left(90)
-                underscore.up()
+                underscore.up
                 underscore.forward(125/4)
                 underscore.down()
                 underscore.circle(125/4)
@@ -189,7 +190,27 @@ while incorrect < 9 and counter < letters:
                 underscore.right(90)
                 underscore.forward(125*i)
                 underscore.right(180)
-            
+            if guess == c:
+                underscore.forward(75)
+                underscore.right(180)
+                underscore.down()
+                underscore.forward(75)
+                underscore.right(90)
+                underscore.forward(125)
+                underscore.right(90)
+                underscore.forward(75)
+                underscore.right(90)
+                underscore.up()
+                underscore.forward(125)
+                underscore.right(90)
+                underscore.forward(75)
+                underscore.forward(125*i)
+                underscore.right(180)
+            if guess = d:
+                underscore.left(90)
+                underscore.down()
+                underscore.forward(125)
+                
     if correct == False:
         incorrect = incorrect + 1
         if incorrect == 1:
