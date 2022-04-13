@@ -246,7 +246,7 @@ while incorrect < 9 and counter < letters:
             underscore.up()
             underscore.forward(125*i)
             underscore.right(180)
-        if guess = "f" and correct == True:
+        if guess == "f" and correct == True:
             underscore.left(90)
             underscore.forward(125)
             underscore.right(90)
@@ -264,7 +264,42 @@ while incorrect < 9 and counter < letters:
             underscore.right(90)
             underscore.forward(125*i)
             underscore.right(180)
-        if 
+        if guess == "g" and correct == True:
+            underscore.left(90)
+            underscore.up()
+            underscore.forward(125)
+            underscore.right(90)
+            underscore.forward(50)
+            underscore.right(180)
+            underscore.down()
+            underscore.forward(12)
+            for i in range(1,91):
+                underscore.forward(0.65)
+                underscore.left(1)
+            underscore.forward(50)
+            for i in range(1,181):
+                underscore.forward(0.65)
+                underscore.left(1)
+            underscore.forward(30)
+            underscore.left(90)
+            underscore.forward(50)
+            underscore.right(180)
+            underscore.forward(50)
+            underscore.right(90)
+            underscore.forward(30)
+            for i in range(1,181):
+                underscore.right(1)
+                underscore.forward(0.65)
+                underscore.forward(50)
+            for i in range(1,91):
+                underscore.right(1)
+                underscore.forward(0.65)
+            underscore.up()
+            underscore.right(180)
+            underscore.forward(38)
+            underscore.left(90)
+            underscore.forward(125)
+            underscore.right(90)
     if correct == False:
         incorrect = incorrect + 1
         if incorrect == 1:
