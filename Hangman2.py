@@ -140,11 +140,11 @@ print(word)
 while incorrect < 9 and counter < letters:
     guess = input(print("Please guess a letter. "))
     guess = guess.lower()
-    for i in range (0,letters):
-        if guess == word[i]:
+    for j in range (0,letters):
+        if guess == word[j]:
             correct = True
             counter = counter + 1
-            underscore.forward(125*i)
+            underscore.forward(125*j)
         if guess == "a" and correct == True:
             underscore.down()
             underscore.left(73)
@@ -160,7 +160,7 @@ while incorrect < 9 and counter < letters:
             underscore.forward(70)
             underscore.right(73)
             underscore.up()
-            underscore.forward(125*i)
+            underscore.forward(125*j)
             underscore.right(180)
         if guess == "b" and correct == True:
             underscore.left(90)
@@ -190,6 +190,9 @@ while incorrect < 9 and counter < letters:
             underscore.left(90)
             underscore.forward(125)
             underscore.right(90)
+            underscore.up()
+            underscore.forward(125*j)
+            underscore.right(180)
         if guess == "c" and correct == True:
             underscore.forward(75)
             underscore.right(180)
@@ -204,7 +207,7 @@ while incorrect < 9 and counter < letters:
             underscore.forward(125)
             underscore.right(90)
             underscore.forward(75)
-            underscore.forward(125*i)
+            underscore.forward(125*j)
             underscore.right(180)
         if guess == "d" and correct == True:
             underscore.left(90)
@@ -221,7 +224,7 @@ while incorrect < 9 and counter < letters:
             underscore.forward(125)
             underscore.right(90)
             underscore.up()
-            underscore.forward(125*i)
+            underscore.forward(125*j)
             underscore.right(180)
         if guess == "e" and correct == True:
             underscore.left(90)
@@ -243,7 +246,7 @@ while incorrect < 9 and counter < letters:
             underscore.right(180)
             underscore.forward(75)
             underscore.up()
-            underscore.forward(125*i)
+            underscore.forward(125*j)
             underscore.right(180)
         if guess == "f" and correct == True:
             underscore.left(90)
@@ -261,7 +264,7 @@ while incorrect < 9 and counter < letters:
             underscore.left(90)
             underscore.forward(63)
             underscore.right(90)
-            underscore.forward(125*i)
+            underscore.forward(125*j)
             underscore.right(180)
         if guess == "g" and correct == True:
             underscore.left(90)
@@ -299,6 +302,23 @@ while incorrect < 9 and counter < letters:
             underscore.left(90)
             underscore.forward(125)
             underscore.right(90)
+            underscore.forward(125*j)
+            underscore.right(180)
+        if guess = "h" and correct == True:
+            underscore.left(90)
+            underscore.forward(125)
+            underscore.right(180)
+            underscore.forward(62)
+            underscore.left(90)
+            underscore.forward(75)
+            underscore.left(90)
+            underscore.forward(62)
+            underscore.right(180)
+            underscore.forward(125)
+            underscore.right(90)
+            underscore.up()
+            underscore.forward(75)
+            underscore.forward(125*j)
     if correct == False:
         incorrect = incorrect + 1
         if incorrect == 1:
