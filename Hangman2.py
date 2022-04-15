@@ -344,6 +344,25 @@ while incorrect < 9 and counter < letters:
             underscore.forward(75)
             underscore.forward(125*j)
             underscore.right(180)
+        if guess == "k" and correct == True:
+            underscore.left(90)
+            underscore.forward(125)
+            underscore.right(180)
+            underscore.forward(62)
+            underscore.left(130)
+            underscore.forward(97)
+            underscore.right(180)
+            underscore.forward(97)
+            underscore.left(100)
+            underscore.forward(97)
+            underscore.right(180)
+            underscore.forward(97)
+            underscore.left(130)
+            underscore.forward(63)
+            underscore.right(90)
+            underscore.up()
+            underscore.forward(125*j)
+            underscore.right(180)
     if correct == False:
         incorrect = incorrect + 1
         if incorrect == 1:
