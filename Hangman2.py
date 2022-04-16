@@ -403,7 +403,23 @@ while incorrect < 9 and counter < letters:
             underscore.up()
             underscore.forward(75)
             underscore.forward(125*i)
-            underscore.right(180)            
+            underscore.right(180)
+        if guess == "o" and correct == True:
+            underscore.left(90)
+            underscore.up()
+            underscore.forward(37)
+            underscore.down()
+            for i in range (0,2):
+                underscore.forward(50)
+                for i in range (1,181):
+                    underscore.forward(0.65)
+                    underscore.right(1)
+            underscore.right(180)
+            underscore.up()
+            underscore.forward(37)
+            underscore.right(90)
+            underscore.forward(125*j)
+            underscore.right(180)
     if correct == False:
         incorrect = incorrect + 1
         if incorrect == 1:
