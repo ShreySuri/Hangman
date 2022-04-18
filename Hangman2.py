@@ -457,6 +457,27 @@ while incorrect < 9 and counter < letters:
             underscore.right(90)
             underscore.forward(125*j)
             underscore.right(180)
+        if guess == "p" and correct == True:
+            underscore.left(90)
+            underscore.forward(125)
+            underscore.right(90)
+            underscore.forward(42)
+            for i in range(1,181):
+                underscore.forward(0.55)
+                underscore.right(1)
+            underscore.forward(42)
+            underscore.right(180)
+            underscore.forward(42)
+            for i in range (1,181):
+                underscore.left(1)
+                underscore.forward(0.55)
+            underscore.forward(42)
+            underscore.left(90)
+            underscore.forward(125)
+            underscore.right(90)
+            underscore.up()
+            underscore.forward(125*j)
+            underscore.right(180)
     if correct == False:
         incorrect = incorrect + 1
         if incorrect == 1:
