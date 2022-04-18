@@ -478,6 +478,39 @@ while incorrect < 9 and counter < letters:
             underscore.up()
             underscore.forward(125*j)
             underscore.right(180)
+        if guess == "q" and correct == True:
+            underscore.left(90)
+            underscore.up()
+            underscore.forward(37)
+            underscore.down()
+            underscore.forward(50)
+            for i in range (1,181):
+                underscore.forward(0.65)
+                underscore.right(1)
+            underscore.forward(50)
+            for i in range (1,46):
+                underscore.forward(0.65)
+                underscore.right(1)
+            underscore.right(100)
+            underscore.up()
+            underscore.forward(30)
+            underscore.right(180)
+            underscore.down()
+            underscore.forward(45)
+            underscore.right(180)
+            underscore.up()
+            underscore.forward(15)
+            underscore.left(100)
+            underscore.down()
+            for i in range (1,136):
+                underscore.forward(0.65)
+                underscore.right(1)
+            underscore.right(180)
+            underscore.up()
+            underscore.forward(37)
+            underscore.right(90)
+            underscore.forward(125*j)
+            underscore.right(180)
     if correct == False:
         incorrect = incorrect + 1
         if incorrect == 1:
