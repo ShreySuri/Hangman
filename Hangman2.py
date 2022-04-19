@@ -511,6 +511,29 @@ while incorrect < 9 and counter < letters:
             underscore.right(90)
             underscore.forward(125*j)
             underscore.right(180)
+        if guess == "r" and correct == True:
+            underscore.left(90)
+            underscore.forward(125)
+            underscore.right(90)
+            underscore.forward(42)
+            for i in range(1,181):
+                underscore.forward(0.55)
+                underscore.right(1)
+            underscore.forward(42)
+            underscore.left(140)
+            underscore.forward(95)
+            underscore.right(180)
+            underscore.forward(95)
+            underscore.right(140)
+            underscore.forward(42)
+            for i in range (1,181):
+                underscore.left(1)
+                underscore.forward(0.55)
+            underscore.forward(42)
+            underscore.left(90)
+            underscore.forward(125)
+            underscore.right(90)
+            underscore.up()
     if correct == False:
         incorrect = incorrect + 1
         if incorrect == 1:
