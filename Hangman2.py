@@ -534,6 +534,35 @@ while incorrect < 9 and counter < letters:
             underscore.forward(125)
             underscore.right(90)
             underscore.up()
+            underscore.forward(125*j)
+            underscore.right(180)
+        if guess == "s" and correct == True:
+            underscore.forward(31)
+            underscore.forward(12)
+            for i in range (1,181):
+                underscore.forward(0.55)
+                underscore.left(1)
+            underscore.forward(12)
+            for i in range (1,181):
+                underscore.forward(0.55)
+                underscore.right(1)
+            underscore.forward(12)
+            underscore.forward(31)
+            underscore.right(180)
+            underscore.forward(31)
+            underscore.forward(12)
+            for i in range (1,181):
+                underscore.left(1)
+                underscore.forward(0.55)
+            underscore.forward(12)
+            for i in range (1,181):
+                underscore.right(1)
+                underscore.forward(0.55)
+            underscore.forward(12)
+            underscore.forward(31)
+            underscore.up()
+            underscore.forward(125*j)
+            underscore.right(180)
     if correct == False:
         incorrect = incorrect + 1
         if incorrect == 1:
