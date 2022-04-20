@@ -563,6 +563,22 @@ while incorrect < 9 and counter < letters:
             underscore.up()
             underscore.forward(125*j)
             underscore.right(180)
+        if guess == "t" and correct == True:
+            underscore.left(90)
+            underscore.up()
+            underscore.forward(125)
+            underscore.right(90)
+            underscore.down()
+            underscore.forward(75)
+            underscore.right(180)
+            underscore.forward(37.5)
+            underscore.left(90)
+            underscore.forward(125)
+            underscore.right(90)
+            underscore.up()
+            underscore.forward(37.5)
+            underscore.forward(125*j)
+            underscore.right(180)
     if correct == False:
         incorrect = incorrect + 1
         if incorrect == 1:
