@@ -579,6 +579,16 @@ while incorrect < 9 and counter < letters:
             underscore.forward(37.5)
             underscore.forward(125*j)
             underscore.right(180)
+        if guess == "u" and correct == True:
+            underscore.left(90)
+            underscore.forward(40)
+            underscore.forward(85)
+            underscore.right(180)
+            underscore.forward(85)
+            for i in range (1,181):
+                underscore.forward(0.65)
+                underscore.left(1)
+            underscore.forward(85)
     if correct == False:
         incorrect = incorrect + 1
         if incorrect == 1:
