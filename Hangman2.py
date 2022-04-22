@@ -651,6 +651,25 @@ while incorrect < 9 and counter < letters:
             underscore.forward(75)
             underscore.forward(125*j)
             underscore.right(180)
+        if guess == "x" and correct == True:
+            underscore.left(59)
+            underscore.forward(146)
+            underscore.right(59)
+            underscore.right(90)
+            underscore.up()
+            underscore.forward(125)
+            underscore.right(90)
+            underscore.right(59)
+            underscore.down()
+            underscore.forward(146)
+            underscore.left(59)
+            underscore.left(90)
+            underscore.up()
+            underscore.forward(125)
+            underscore.right(90)
+            underscore.forward(125*j)
+            underscore.right(180)
+
     if correct == False:
         incorrect = incorrect + 1
         if incorrect == 1:
