@@ -686,6 +686,9 @@ while incorrect < 9 and counter < letters:
             underscore.forward(37.5)
             underscore.forward(125*j)
             underscore.right(180)
+        if guess == "z" and correct == True:
+            underscore.forward(125*j)
+            underscore.right(180)
     if correct == False:
         incorrect = incorrect + 1
         if incorrect == 1:
