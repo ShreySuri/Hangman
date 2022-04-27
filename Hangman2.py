@@ -262,7 +262,7 @@ while incorrect < 9 and counter < letters:
                 underscore.right(180)
                 underscore.forward(75)
                 underscore.left(90)
-            underscore.forward(62)
+                underscore.forward(62)
                 underscore.left(90)
                 underscore.forward(50)
                 underscore.right(180)
@@ -704,6 +704,8 @@ while incorrect < 9 and counter < letters:
                 underscore.up()
                 underscore.forward(125*j)
                 underscore.right(180)
+        else:
+            correct == False
     if correct == False:
         incorrect = incorrect + 1
         if incorrect == 1:
