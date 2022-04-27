@@ -704,6 +704,7 @@ while incorrect < 9 and counter < letters:
                 underscore.up()
                 underscore.forward(125*j)
                 underscore.right(180)
+            word[j] = "placeholder"
         else:
             correct == False
     if correct == False:
