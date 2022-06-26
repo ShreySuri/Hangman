@@ -4,12 +4,15 @@ import time
 
 print("Remember to maximize the turtle window. ")
 
-width = 25
+width = 30
 
 
 t_gallow = turtle.Pen()
 
 t_gallow.hideturtle()
+
+time.sleep(5)
+
 t_gallow.forward(1)
 t_gallow.up()
 t_gallow.forward(200)
@@ -62,3 +65,92 @@ t_gallow.forward(145)
 t_gallow.forward(2 ** 0.5 * width)
 t_gallow.left(90)
 t_gallow.down()
+
+x = random.randint(1,15)
+
+if x == 1:
+    word = ["o","u","n","c","e"]
+    letters = 5
+elif x == 2:
+    word = ["c","u","p"]
+    letters = 3
+elif x == 3:
+    word = ["p","i","n","t"]
+    letters = 4
+elif x == 4:
+    word = ["q","u","a","r","t"]
+    letters = 5
+elif x == 5:
+    word = ["l","i","t","e","r"]
+    letters = 5
+elif x == 6:
+    word = ["g","a","l","l","o","n"]
+    letters = 6
+elif x == 7:
+    word = ["i","n","c","h"]
+    letters = 4
+elif x == 8:
+    word = ["f","o","o","t"]
+    letters = 4
+elif x == 9:
+    word = ["y","a","r","d"]
+    letters = 4
+elif x == 10:
+    word = ["m","e","t","e","r"]
+    letters = 5
+elif x == 11:
+    word = ["m","i","l","e"]
+    letters = 4
+elif x == 12:
+    word = ["g","r","a","m"]
+    letters = 4
+elif x == 13:
+    word = ["o","u","n","c","e"]
+    letters = 5
+elif x == 14:
+    word = ["p","o","u","n","d"]
+    letters = 5
+elif x == 15:
+    word = ["t","o,","n"]
+    letters = 3
+else:
+    print("Something went wrong. ")
+
+game = True
+all_letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+guesses = []
+known_word = []
+for i in range (0, letters):
+    string = "_ "
+    known_word.append(string)
+
+
+while game == True:
+    counter = 0
+    guess = input(print("Please guess a letter. If you would like a word library, type library."))
+    guess = guess.lower()
+
+    for i in range (0, 26):
+        if all_letters[i] == guess:
+            counter = counter + 1
+        else:
+            counter = counter + 0
+    if guess == "library":
+        print("")
+        print("cup")
+        print("ton")
+        print("foot")
+        print("gram")
+        print("inch")
+        print("mile")
+        print("pint")
+        print("yard")
+        print("liter")
+        print("meter")
+        print("ounce")
+        print("pound")
+        print("quart")
+        print("gallon")
+        
+            
+
