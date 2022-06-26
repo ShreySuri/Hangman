@@ -127,30 +127,36 @@ for i in range (0, letters):
 
 while game == True:
     counter = 0
-    guess = input(print("Please guess a letter. If you would like a word library, type library."))
-    guess = guess.lower()
+    while counter != 1:
+        guess = input(print("Please guess a letter. If you would like a word library, type library."))
+        guess = guess.lower()
+        print(guess)
 
-    for i in range (0, 26):
-        if all_letters[i] == guess:
-            counter = counter + 1
+        for i in range (0, 26):
+            if all_letters[i] == guess:
+                counter = 1
+            else:
+                toggle = True
+                
+        if guess == "library":
+            print("")
+            print("cup")
+            print("ton")
+            print("foot")
+            print("gram")
+            print("inch")
+            print("mile")
+            print("pint")
+            print("yard")
+            print("liter")
+            print("meter")
+            print("ounce")
+            print("pound")
+            print("quart")
+            print("gallon")
+            print("")
         else:
-            counter = counter + 0
-    if guess == "library":
-        print("")
-        print("cup")
-        print("ton")
-        print("foot")
-        print("gram")
-        print("inch")
-        print("mile")
-        print("pint")
-        print("yard")
-        print("liter")
-        print("meter")
-        print("ounce")
-        print("pound")
-        print("quart")
-        print("gallon")
+            toggle = False
         
             
 
