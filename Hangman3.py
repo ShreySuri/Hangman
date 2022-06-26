@@ -2,6 +2,15 @@ import turtle
 import random
 import time
 
+
+def listToString(s): 
+    str1 = ""  
+    for ele in s: 
+        str1 += ele    
+    return str1 
+
+
+
 print("Remember to maximize the turtle window. ")
 
 width = 30
@@ -123,18 +132,20 @@ known_word = []
 for i in range (0, letters):
     string = "_ "
     known_word.append(string)
+incorrect = 0
 
 
 while game == True:
     counter = 0
     while counter != 1:
-        guess = input(print("Please guess a letter. If you would like a word library, type library."))
+        guess = input(print("Please guess a letter. If you would like a word library, type 'library'."))
         guess = guess.lower()
         print(guess)
 
         for i in range (0, 26):
             if all_letters[i] == guess:
                 counter = 1
+                print(all_letters[i])
             else:
                 toggle = True
                 
@@ -157,6 +168,27 @@ while game == True:
             print("")
         else:
             toggle = False
+
+    correct = False
+    
+    for i in range (0, letters):
+        if word[i] == guess:
+            string = "%s " % guess
+            known_word[i] = string
+            correct = True
+        else:
+            toggle = True
+
+    if correct == True:
+        str_known_word = listToString(known_word)
+        print(str_known_word)
+    else:
+        guesses.append(string)
+        str_guesses = listToString(guesses)
+        print(str_guesses)
+        incorrect = incorrect + 1
+    print("")
         
-            
+        
+               
 
