@@ -9,12 +9,9 @@ def listToString(s):
         str1 += ele    
     return str1 
 
-
-
 print("Remember to maximize the turtle window. ")
 
 width = 30
-
 
 t_gallow = turtle.Pen()
 
@@ -134,6 +131,7 @@ for i in range (0, letters):
     known_word.append(string)
 incorrect = 0
 correct_count = 0
+total_guess = 0
 
 print(listToString(known_word))
 
@@ -284,6 +282,13 @@ while game == True:
             
         else:
             print("Something went wrong.")
+
+    total_guess = total_guess + 1
+
+if win == True:
+    print("Yay! You won! It took you %s guesses." % total_guess)
+else:
+    print("Oh no, the man has been hung. Give it another shot.")
             
         
         
