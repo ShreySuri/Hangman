@@ -10,6 +10,7 @@ def listToString(s):
     return str1 
 
 print("Remember to maximize the turtle window. ")
+print("")
 
 width = 30
 
@@ -134,10 +135,13 @@ correct_count = 0
 total_guess = 0
 
 print(listToString(known_word))
+print("")
 
 while game == True:    
     valid_guess = False
-    while valid_guess == False:
+    already_guess = False
+    
+    while valid_guess == False or already_guess == True:
         guess = input(print("Please guess a letter. If you would like a word library, type 'library'."))
         guess = guess.lower()
 
@@ -146,6 +150,35 @@ while game == True:
                 valid_guess = True
             else:
                 toggle = True
+
+        string = "%s " % guess
+
+        if valid_guess == True and incorrect > 0:
+            for i in range (0, incorrect):
+                if guesses[i] == string:
+                    already_guess == True
+                    print("")
+                    print("You have already guessed this letter. Please choose a different one.")
+                    print("")
+                    valid_guess = False
+                else:
+                    toggle = False
+
+        elif valid_guess == True and correct_count > 0:
+            for j in range (0, correct_count):
+                if known_word[j] == string:
+                    already_guess == True
+                    print("")
+                    print("You have already guessed this letter. Please choose a different one.")
+                    print("")
+                    valid_guess = False
+                else:
+                    toggle = False
+            
+        else:
+            toggle = True
+
+
                 
         if guess == "library":
             print("")
