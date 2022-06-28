@@ -132,16 +132,18 @@ for i in range (0, letters):
     known_word.append(string)
 incorrect = 0
 correct_count = 0
-total_guess = 0
+total_guess_count = 0
+total_guess = []
 
 print(listToString(known_word))
 print("")
 
-while game == True:    
-    valid_guess = False
-    already_guess = False
+while game == True:
     
-    while valid_guess == False or already_guess == True:
+    valid_guess = False
+    
+    while valid_guess == False:
+        
         guess = input(print("Please guess a letter. If you would like a word library, type 'library'."))
         guess = guess.lower()
 
@@ -151,33 +153,17 @@ while game == True:
             else:
                 toggle = True
 
-        string = "%s " % guess
-
-        if valid_guess == True and incorrect > 0:
-            for i in range (0, incorrect):
-                if guesses[i] == string:
-                    already_guess == True
+        if valid_guess == True and total_guess_count > 0:
+            for i in  range (0, total_guess_count):
+                if total_guess[i] == guess:
                     print("")
                     print("You have already guessed this letter. Please choose a different one.")
                     print("")
                     valid_guess = False
                 else:
                     toggle = False
-
-        elif valid_guess == True and correct_count > 0:
-            for j in range (0, correct_count):
-                if known_word[j] == string:
-                    already_guess == True
-                    print("")
-                    print("You have already guessed this letter. Please choose a different one.")
-                    print("")
-                    valid_guess = False
-                else:
-                    toggle = False
-            
         else:
             toggle = True
-
 
                 
         if guess == "library":
@@ -199,6 +185,10 @@ while game == True:
             print("")
         else:
             toggle = False
+
+    total_guess.append(guess)
+    total_guess_count = total_guess_count + 1
+
 
     correct = False
     
@@ -316,10 +306,9 @@ while game == True:
         else:
             print("Something went wrong.")
 
-    total_guess = total_guess + 1
 
 if win == True:
-    print("Yay! You won! It took you %s guesses." % total_guess)
+    print("Yay! You won! It took you %s guesses." % total_guess_count)
 else:
     print("Oh no, the man has been hung. Give it another shot.")
             
