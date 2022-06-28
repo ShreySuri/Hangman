@@ -308,7 +308,41 @@ while game == True:
 
 
 if win == True:
-    print("Yay! You won! It took you %s guesses." % total_guess_count)
+    if incorrect == 7:
+        t_gallow.right(180)
+        t_gallow.forward(150)
+        t_gallow.right(30)
+        t_gallow.up()
+        t_gallow.forward(325)
+        t_gallow.left(90)
+        t_gallow.forward(25)
+        t_gallow.left(135)
+        t_gallow.down()
+        t_gallow.forward(28.28)
+        t_gallow.up()
+        t_gallow.left(135)
+        t_gallow.forward(20)
+        t_gallow.left(135)
+        t_gallow.down()
+        t_gallow.forward(28.28)
+        t_gallow.up()
+        t_gallow.right(135)
+        t_gallow.forward(20)
+        t_gallow.right(90)
+        t_gallow.forward(30)
+        t_gallow.right(180)
+        t_gallow.left(135)
+        t_gallow.down()
+        t_gallow.forward(28.28)
+        t_gallow.up()
+        t_gallow.left(135)
+        t_gallow.forward(20)
+        t_gallow.left(135)
+        t_gallow.down()
+        t_gallow.forward(28.28)
+        t_gallow.left(135)
+    else:
+        print("Yay! You won! It took you %s guesses." % total_guess_count)
 else:
     print("Oh no, the man has been hung. Give it another shot.")
             
