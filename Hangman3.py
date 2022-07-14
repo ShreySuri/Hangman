@@ -73,55 +73,15 @@ t_gallow.forward(2 ** 0.5 * width)
 t_gallow.left(90)
 t_gallow.down()
 
-x = random.randint(1,15)
+words_list = ["cat", "dog", "bird", "mouse", "pig"]
+total_word_count = len(words_list) - 1
+word_picker = random.randint(0, total_word_count) 
 
-if x == 1:
-    word = ["o","u","n","c","e"]
-    letters = 5
-elif x == 2:
-    word = ["c","u","p"]
-    letters = 3
-elif x == 3:
-    word = ["p","i","n","t"]
-    letters = 4
-elif x == 4:
-    word = ["q","u","a","r","t"]
-    letters = 5
-elif x == 5:
-    word = ["l","i","t","e","r"]
-    letters = 5
-elif x == 6:
-    word = ["g","a","l","l","o","n"]
-    letters = 6
-elif x == 7:
-    word = ["i","n","c","h"]
-    letters = 4
-elif x == 8:
-    word = ["f","o","o","t"]
-    letters = 4
-elif x == 9:
-    word = ["y","a","r","d"]
-    letters = 4
-elif x == 10:
-    word = ["m","e","t","e","r"]
-    letters = 5
-elif x == 11:
-    word = ["m","i","l","e"]
-    letters = 4
-elif x == 12:
-    word = ["g","r","a","m"]
-    letters = 4
-elif x == 13:
-    word = ["o","u","n","c","e"]
-    letters = 5
-elif x == 14:
-    word = ["p","o","u","n","d"]
-    letters = 5
-elif x == 15:
-    word = ["t","o,","n"]
-    letters = 3
-else:
-    print("Something went wrong. ")
+word = words_list[word_picker]
+word = list(word)
+letters = len(word)
+
+sorted_word_list = sort(words_list)
 
 game = True
 all_letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
@@ -167,22 +127,9 @@ while game == True:
 
                 
         if guess == "library":
-            print("")
-            print("cup")
-            print("ton")
-            print("foot")
-            print("gram")
-            print("inch")
-            print("mile")
-            print("pint")
-            print("yard")
-            print("liter")
-            print("meter")
-            print("ounce")
-            print("pound")
-            print("quart")
-            print("gallon")
-            print("")
+            for i in range (0, total_word_count):
+                print(words_list[i])
+
         else:
             toggle = False
 
