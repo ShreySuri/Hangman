@@ -55,5 +55,5 @@ total_word_count = len(words_list) - 1
 word_picker = random.randint(0, total_word_count) 
 
 word = words_list[word_picker]
-
-listOfWord = 
+word = list(word)
+letters = len(word)
