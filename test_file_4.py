@@ -51,7 +51,9 @@ else:
 
 
 words_list = ["cat", "dog", "bird", "mouse", "pig"]
-letters_list = [3, 3, 4, 5, 3]
-total_word_count = 5
+total_word_count = len(words_list) - 1
+word_picker = random.randint(0, total_word_count) 
 
-word_picker
+word = words_list[word_picker]
+
+listOfWord = 
