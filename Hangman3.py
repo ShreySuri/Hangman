@@ -73,7 +73,7 @@ t_gallow.forward(2 ** 0.5 * width)
 t_gallow.left(90)
 t_gallow.down()
 
-words_list = ["cat", "dog", "bird", "mouse", "pig", "]
+words_list = ["cat", "dog", "bird", "mouse", "pig", "sheep", "horse", "cow", "snake", "goat", "chicken", "lion", "tiger", "monkey", ""]
 total_word_count = len(words_list) - 1
 word_picker = random.randint(0, total_word_count) 
 
