@@ -128,8 +128,10 @@ while game == True:
 
                 
         if guess == "library":
+            print("")
             for i in range (0, total_word_count):
                 print(words_list[i])
+            print("")
 
         else:
             toggle = False
