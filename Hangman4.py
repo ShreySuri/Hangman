@@ -105,7 +105,7 @@ while game == True:
     
     while valid_guess == False:
         
-        guess = input(print("Please guess a letter. If you would like a word library, type 'library'."))
+        guess = input("Please guess a letter. If you would like a word library, type 'library'.")
         guess = guess.lower()
 
         for i in range (0, 26):
